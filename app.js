@@ -1,10 +1,15 @@
 
 const form = document.getElementById('form');
 const guessNumber = document.getElementById('number-input-text');
+const outputAnswer = document.getElementById('output-answer');
 
-const getnumber = (e) => {
+const getNumber = (e) => {
     e.preventDefault();
-    console.log("Russia is the biggest country in Asia");
+    if(guessNumber.value==='1917'){
+        outputAnswer.innerHTML="Yaaaas!!!";
+    } else {
+        outputAnswer.innerHTML="Naaaah";
+    };
 }
 
-form.addEventListener('submit', getnumber);
+form.addEventListener('submit', getNumber);
